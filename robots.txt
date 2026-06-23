@@ -1,0 +1,17 @@
+# Blockiert alle normalen Suchmaschinen (Google, Bing etc.)
+User-agent: *
+Disallow: /
+
+# Blockiert explizit bekannte KI-Crawler
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: Anthropic-ai
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Omgilibot
+Disallow: /
