@@ -4,90 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBS Bavarian Business Services GmbH</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png?v=1">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f5f5f7;
             color: #1d1d1f;
             margin: 0;
-            padding: 50px 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Navigation (Apple-Style) */
+        nav {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            border-bottom: 1px solid #e5e5ea;
+            z-index: 1000;
             display: flex;
             justify-content: center;
+            padding: 15px 0;
         }
+        nav a {
+            color: #1d1d1f;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #0071e3;
+        }
+        /* Container und Sektionen */
         .container {
             background-color: #ffffff;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             max-width: 600px;
-            width: 100%;
+            width: 90%;
+            margin-top: 100px; /* Platz für das fixierte Menü */
+            margin-bottom: 50px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding-top: 80px; /* Scroll-Offset wegen des Menüs */
+            margin-top: -80px;
         }
         .brand-header {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e5e5ea;
+            padding-bottom: 20px;
         }
         .logo {
-            height: 50px;
+            height: 60px;
             width: auto;
             object-fit: contain;
         }
         h1 {
             font-size: 1.5em;
             margin: 0;
+        }
+        h2 {
+            font-size: 1.2em;
             color: #1d1d1f;
+            margin-bottom: 15px;
         }
         p {
             line-height: 1.6;
             font-size: 0.95em;
         }
-        .impressum {
-            margin-top: 40px;
-            padding-top: 20px;
+        .button {
+            display: inline-block;
+            background-color: #0071e3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background-color: #0077ed;
+        }
+        .impressum-text {
             border-top: 1px solid #e5e5ea;
+            padding-top: 30px;
             font-size: 0.85em;
             color: #86868b;
         }
-        .impressum h2 {
-            font-size: 1.2em;
-            color: #1d1d1f;
-            margin-bottom: 15px;
+        .impressum-text h2 {
+            color: #86868b;
         }
     </style>
 </head>
 <body>
 
+<!-- Das Fake-Menü -->
+<nav>
+    <a href="#start">Start</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#anfahrt">Anfahrt</a>
+    <a href="#impressum">Impressum</a>
+</nav>
+
 <div class="container">
+    
+    <!-- Bereich: Start -->
+    <section id="start">
         <div class="brand-header">
             <img src="https://raw.githubusercontent.com/BBSGmbH/bimi-assets/refs/heads/main/logo.svg" alt="BBS Logo" class="logo">
             <h1>BBS Bavarian Business Services GmbH</h1>
         </div>
+        <p>Willkommen bei der BBS Bavarian Business Services GmbH. Wir sind Ihr kompetenter Partner für professionelle Business-Lösungen und Dienstleistungen. Entdecken Sie unser Angebot und erfahren Sie, wie wir Ihre Prozesse unterstützen können.</p>
+    </section>
 
-        <p>Als Ihr zuverlässiger Partner bieten wir maßgeschneiderte Business-Services in Bayern. Unsere vollständige Internetpräsenz steht Ihnen in Kürze zur Verfügung. Sie erreichen uns bereits uneingeschränkt über die unten stehenden Kontaktdaten im Impressum.</p>
-        
-        <div class="impressum">
-            <h2>Impressum</h2>
-            <p><strong>Angaben gemäß § 5 TMG:</strong><br>
-            BBS Bavarian Business Services GmbH<br>
+    <!-- Bereich: Über uns -->
+    <section id="ueber-uns">
+        <h2>Über uns</h2>
+        <p>Unsere Expertise umfasst ganzheitliche Business-Services, strategische Beratung und Prozessoptimierung. Wir bieten maßgeschneiderte Lösungen für den Mittelstand, um Ihre Geschäftsprozesse nachhaltig zu stärken. Qualität, Zuverlässigkeit und Diskretion stehen bei uns an erster Stelle.</p>
+    </section>
+
+    <!-- Bereich: Anfahrt -->
+    <section id="anfahrt">
+        <h2>So finden Sie uns</h2>
+        <p>Unser Büro befindet sich zentral im Herzen von München in Schwabing-West. Sie erreichen uns bequem mit den öffentlichen Verkehrsmitteln oder dem Auto.</p>
+        <p>
+            <strong>Adresse:</strong><br>
             Hohenzollernstraße 154<br>
-            80797 München<br>
-            Deutschland</p>
+            80797 München
+        </p>
+        <a href="https://maps.google.com/?q=Hohenzollernstraße+154,+80797+München" target="_blank" class="button">Auf Google Maps öffnen</a>
+    </section>
+    
+    <!-- Bereich: Impressum -->
+    <section id="impressum" class="impressum-text">
+        <h2>Impressum</h2>
+        <p><strong>Angaben gemäß § 5 TMG:</strong><br>
+        BBS Bavarian Business Services GmbH<br>
+        Hohenzollernstraße 154<br>
+        80797 München<br>
+        Deutschland</p>
 
-            <p><strong>Vertreten durch:</strong><br>
-            Bastian Ebhardt (Geschäftsführer)</p>
+        <p><strong>Vertreten durch:</strong><br>
+        Bastian Ebhardt (Geschäftsführer)</p>
 
-            <p><strong>Kontakt:</strong><br>
-            E-Mail: mail@bbs.bayern<br>
-            Telefon: +49-175-8076725</p>
+        <p><strong>Kontakt:</strong><br>
+        E-Mail: mail@bbs.bayern<br>
+        Telefon: +49-175-8076725</p>
 
-            <p><strong>Registereintrag:</strong><br>
-            Eintragung im Handelsregister.<br>
-            Registergericht: Amtsgericht München<br>
-            Registernummer: HRB 279043</p>
-        </div>
-    </div>
+        <p><strong>Registereintrag:</strong><br>
+        Eintragung im Handelsregister.<br>
+        Registergericht: Amtsgericht München<br>
+        Registernummer: HRB 279043</p>
+    </section>
+
+</div>
 
 </body>
 </html>
