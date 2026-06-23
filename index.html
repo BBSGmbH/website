@@ -28,25 +28,33 @@
             z-index: 1000;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 12px 5px; /* Etwas kompakter */
+            padding: 15px 10px;
         }
         nav a {
             color: #1d1d1f;
             text-decoration: none;
-            margin: 0 8px; /* Abstände verkleinert für Mobil */
-            font-size: 0.85em; /* Schrift minimal kleiner für Mobil */
+            margin: 0 10px;
+            font-size: 0.9em;
             font-weight: 500;
         }
         nav a:hover {
             color: #0071e3;
         }
-        .lang-switch {
-            position: absolute;
-            right: 15px; /* Etwas mehr Platz zum Rand */
-            color: #86868b;
-            font-weight: bold;
+        /* Sprachschalter als eleganter Button unten rechts */
+        .lang-footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #0071e3;
+            font-weight: 600;
             font-size: 0.85em;
+            border: 1px solid #e5e5ea;
         }
         .container {
             background-color: #ffffff;
@@ -82,9 +90,10 @@
     <a href="ueber-uns.html">Über uns</a>
     <a href="anfahrt.html">Anfahrt</a>
     <a href="impressum.html">Impressum</a>
-    
-    <a href="index-en.html" class="lang-switch">EN</a>
 </nav>
+
+<!-- Sprachschalter -->
+<a href="index-en.html" class="lang-footer">English</a>
 
 <div class="container">
     <div class="brand-header">
